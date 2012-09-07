@@ -1,4 +1,4 @@
-*Testing
+#Testing
 A grep from an explanatory email I sent an inquirer:
 
 "First things first. While I scramble to put up all of my examples, please pick the Bluetooth device of your choice (laptop, PC w/ Bluetooth dongle, phone, etc.) and install some sort of Bluetooth terminal program on it. The RN-42 now in your calculator shows up as an SPP device (Bluetooth serial port) so you need a terminal that can talk to that. I just searched "Bluetooth SPP" on Google Play and found a few programs that worked. On a PC the SPP should show up as a COM port (unless you have Linux. Tell me if you are using Linux, because that's a little more complicated). I should mention that this is just for testing! You need a reliable way to see if data is going from your device to your calc and vice versa.
