@@ -1,0 +1,8 @@
+ORG		userMem-2
+DB		$BB, $6D
+Start:
+	BCALL	RclAns
+	BCALL	ConvOP1
+	LD		A,E
+	BCALL	SendAByte
+	RET

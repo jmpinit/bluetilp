@@ -1,0 +1,10 @@
+ORG		userMem-2
+DB		$BB, $6D
+Start:
+	BCALL	Rec1stByte
+	LD		H,0
+	LD		L,A
+	BCALL	SetXXXXOP2
+	BCALL	OP2ToOP1
+	BCALL	StoAns
+	RET
