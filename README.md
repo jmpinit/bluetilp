@@ -1,6 +1,11 @@
-#Testing BlueTILP
-A grep from an explanatory email I sent an inquirer:
+# Bluetooth TI-84+
 
-"First things first. While I scramble to put up all of my examples, please pick the Bluetooth device of your choice (laptop, PC w/ Bluetooth dongle, phone, etc.) and install some sort of Bluetooth terminal program on it. The RN-42 now in your calculator shows up as an SPP device (Bluetooth serial port) so you need a terminal that can talk to that. I just searched "Bluetooth SPP" on Google Play and found a few programs that worked. On a PC the SPP should show up as a COM port (unless you have Linux. Tell me if you are using Linux, because that's a little more complicated). I should mention that this is just for testing! You need a reliable way to see if data is going from your device to your calc and vice versa.
+![](http://hackniac.com/images/posts/blue_tilp/blue_tilp_guts1.jpg)
 
-Now, the other part of the testing equation is getting a terminal program on your calculator. I've written one of those in TI-BASIC, which I will put up on Github. Essential to that program are two assembly language programs (named RX and TX) that allow TI-BASIC to send/receive over the TI linkport. Basically, 84:asm(prgmTX) will send 84 over the TI linkport, and hopefully over Bluetooth too. Send ASCII values that way (like 97 for 'a') and you should see letters/symbols pop up in your Bluetooth SPP terminal. asm(prgmRX) will wait for something to be received and then put it into the Ans variable as an integer, to be used as you wish."
+I put an Attiny13 and RN-42 into a TI-84+ and wrote assembly code to create a TI Link Protocol to Bluetooth bridge that works in both directions. It's transparent to the calculator's operating system, but makes the calculator appear as a regular serial port to any connected computer. I used that property to [fly a drone with my calculator](http://hackaday.com/2012/08/15/toorcamp-quadcopter-controlled-by-a-ti-84/).
+
+Code is at github [here](https://github.com/jmptable/bluetilp).
+
+Schematic is here:
+
+[![](http://www.hackniac.com/blog/wp-content/uploads/2012/04/bluetilp_schematic-1024x302.jpg)](http://www.hackniac.com/blog/wp-content/uploads/2012/04/bluetilp_schematic.jpg)
